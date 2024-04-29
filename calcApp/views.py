@@ -32,6 +32,11 @@ def home(request):
                 context = {'result': result}
                 return render(request, 'home.html', context)
 
+            elif opr == 'power':
+                result = float(snum) ** float(lnum)
+                context = {'result': result}
+                return render(request, 'home.html', context)
+
             else:
                 return render(request, 'home.html')
 
