@@ -17,8 +17,10 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         .content {
             flex: 1;
+            padding: 20px;
         }
         .footer {
             background-color: #333;
@@ -66,7 +68,7 @@
     <br><h3>Welcome to Calculator by ENG/ Mohammed Younis</h3><br><br>
     <form method="post" action="{% url 'home' %}">
       {% csrf_token %}
-      <input type="number" class="form-control" name="snum" placeholder="Inter the frist number"><br>
+      <input type="number" class="form-control" name="snum" step="0.001" placeholder="Inter the frist number"><br>
       
       <label for="choices">Select a oprator:</label>
       <select id="choices" name="opr">
@@ -76,13 +78,13 @@
           <option value="devide">/</option>
           <option value="power">Power</option>
       </select><br><br>
-      <input type="number" class="form-control" name="lnum" placeholder="Inter the second number or power number"><br>
+      <input type="number" class="form-control" name="lnum" step="0.001" placeholder="Inter the second number or power number"><br>
       <input type="submit" class="btn btn-primary" value="submit"><br>
       <hr>
       <br><h2>result is : {{result}}</h2>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </div>
+  </div>
     <footer class="footer">
     <div class="social-icons">
         <!-- Replace # with the links to your social media profiles -->
